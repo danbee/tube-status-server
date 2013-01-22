@@ -1,4 +1,6 @@
-require(['underscore', 'backbone', 'mustache', 'views/line_list'],
+require(['underscore',
+         'backbone',
+         'mustache',
+         'views/line_list'],
 function(_, Backbone, Mustache, LineList) {
-
 });

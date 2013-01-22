@@ -1,4 +1,5 @@
-require(['backbone', 'templates/line.mustache'], function(Backbone) {
+require(['backbone'], function(Backbone) {
   var Line = Backbone.Model.extend({
+
   });
 });
