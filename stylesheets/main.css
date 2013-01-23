@@ -1,0 +1,79 @@
+#line-list li .colour {
+  display: block;
+  float: left;
+  width: 1em;
+  height: 1em;
+  margin-right: 0.5em; }
+
+li .name {
+  text-shadow: none;
+  padding: 0.2em 0.5em;
+  font-weight: normal; }
+
+li .status {
+  float: right;
+  text-transform: capitalize; }
+
+li .good-service {
+  color: green; }
+
+li .part-closure, li .minor-delays {
+  color: #CC9900; }
+
+li .special-service {
+  color: #000099; }
+
+li .major-delays {
+  color: #CC0000; }
+
+#bakerloo .name {
+  background: #b36305;
+  color: white; }
+
+#central .name {
+  background: #e32017;
+  color: white; }
+
+#circle .name {
+  background: #ffd300;
+  color: #113b92; }
+
+#district .name {
+  background: #00782a;
+  color: white; }
+
+#docklands .name {
+  background: #00a4a7;
+  color: white; }
+
+#hammersmithcity .name {
+  background: #f3a9bb;
+  color: #113b92; }
+
+#jubilee .name {
+  background: #a0a5a9;
+  color: white; }
+
+#metropolitan .name {
+  background: #9b0056;
+  color: white; }
+
+#northern .name {
+  background: black;
+  color: white; }
+
+#overground .name {
+  background: #ee7c0e;
+  color: white; }
+
+#piccadilly .name {
+  background: #003688;
+  color: white; }
+
+#victoria .name {
+  background: #0098d4;
+  color: white; }
+
+#waterloocity .name {
+  background: #95cdba;
+  color: #113b92; }

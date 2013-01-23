@@ -24,6 +24,7 @@ function(Backbone,
       this.collection.models.forEach(function(model) {
         html += Mustache.render(lineTemplate, model.toJSON());
       });
+      // render the HTML and refresh jQuery Mobile.
       this.$el.html(html).listview("refresh");
     },
 
