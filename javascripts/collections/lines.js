@@ -7,11 +7,16 @@ define(['backbone', 'models/line'], function(Backbone, Line) {
   };
 
   var LinesCollection = Backbone.Collection.extend({
-    url: "http://api.tubeupdates.com/?method=get.status",
+    // url: "http://api.tubeupdates.com/?method=get.status",
+    urls: {
+      now: "/test-data/now.json",
+      tomorrow: "/test-data/tomorrow.json",
+      weekend: "/test-data/weekend.json"
+    },
 
     model: Line,
 
-    sync: MySync,
+    // sync: MySync,
 
     parse: function(data) {
       return data.response.lines;

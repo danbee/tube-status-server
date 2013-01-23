@@ -6,7 +6,21 @@ li .name {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-li .status { float: right; text-transform: capitalize; }
+li .status { float: right; text-transform: capitalize; font-size: 0.8em; padding-top: 0.1em; }
+li .message-count {
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid white;
+  text-align: center;
+  margin-left: 0.5em;
+  font-weight: normal;
+  font-size: 0.9em;
+  float: right;
+  background: black;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 1em;
+}
 li .good-service { color: green; }
 li .special-service { color: #000099; }
 li .part-suspended, li .part-closure, li .minor-delays { color: #CC9900; }
@@ -27,7 +41,7 @@ $docklands:       #00A4A7;
 $overground:      #EE7C0E;
 $tramlink:        #84B817;
 
-#bakerloo .name { background: $bakerloo; color: white; }
+#bakerloo .name { background: $bakerloo; color: white; border-width: 1px; }
 #central .name { background: $central; color: white; }
 #circle .name { background: $circle; color: rgb(17, 59, 146); }
 #district .name { background: $district; color: white; }

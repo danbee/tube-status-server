@@ -1,1 +1,5 @@
-<li id="{{ id }}"><span class="name">{{{ name }}}</span> <span class="status {{ status_class }}">{{ status }}</span></li>
+<li id="{{ id }}">
+  <span class="name">{{{ name }}}</span>
+  {{ #message_count }}<span class="message-count">{{ message_count }}</span>{{ /message_count }}
+  <span class="status {{ status_class }}">{{ status }}</span>
+</li>
