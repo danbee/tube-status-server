@@ -1,14 +1,10 @@
-#line-list li .colour {
-  display: block;
-  float: left;
-  width: 1em;
-  height: 1em;
-  margin-right: 0.5em; }
-
 li .name {
   text-shadow: none;
   padding: 0.2em 0.5em;
-  font-weight: normal; }
+  font-weight: normal;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1); }
 
 li .status {
   float: right;
@@ -17,7 +13,7 @@ li .status {
 li .good-service {
   color: green; }
 
-li .part-closure, li .minor-delays {
+li .part-suspended, li .part-closure, li .minor-delays {
   color: #CC9900; }
 
 li .special-service {
@@ -28,7 +24,8 @@ li .major-delays {
 
 #bakerloo .name {
   background: #b36305;
-  color: white; }
+  color: white;
+  border-width: 1px; }
 
 #central .name {
   background: #e32017;
