@@ -1,11 +1,15 @@
-define(['jquery',
-        'underscore',
-        'jquerymobile',
+define(['jquerymobile',
         'backbone',
-        'mustache'],
-function($, _, a, Backbone, Mustache) {
+        'mustache',
+        'collections/lines',
+        'views/line_list'],
+function(a, Backbone, Mustache, LinesCollection, LineList) {
   return {
     initialize: function() {
+      lines = new LinesCollection;
+      lineList = new LineList({ collection: lines });
+
+      lines.fetch();
     }
   };
 });
