@@ -1,4 +1,4 @@
-require(['backbone',
+define(['backbone',
         'text',
         'models/line',
         'collections/lines',
@@ -12,5 +12,7 @@ function(Backbone,
   var LineList = Backbone.View.extend({
     el: '#line-list'
   });
+
+  return LineList;
 
 });

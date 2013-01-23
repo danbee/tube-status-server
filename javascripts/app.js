@@ -1,6 +1,11 @@
-require(['underscore',
-         'backbone',
-         'mustache',
-         'views/line_list'],
-function(_, Backbone, Mustache, LineList) {
+define(['jquery',
+        'underscore',
+        'jquerymobile',
+        'backbone',
+        'mustache'],
+function($, _, a, Backbone, Mustache) {
+  return {
+    initialize: function() {
+    }
+  };
 });
