@@ -6,6 +6,7 @@ define(['jquerymobile',
 function(a, Backbone, Mustache, LinesCollection, LineList) {
   return {
     initialize: function() {
+      $('body').removeClass('loading');
       var refetch = function() {
         $.mobile.loading('show');
         lines.fetch({
