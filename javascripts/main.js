@@ -1,7 +1,6 @@
 require.config({
   paths: {
     jquery: 'libs/jquery.min',
-    jquerymobile: 'libs/jquery.mobile.min',
     underscore: 'libs/underscore',
     backbone: 'libs/backbone',
     mustache: 'libs/mustache',

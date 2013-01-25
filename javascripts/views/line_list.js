@@ -25,7 +25,7 @@ function(Backbone,
         html += Mustache.render(lineTemplate, model.toJSON());
       });
       // render the HTML and refresh jQuery Mobile.
-      this.$el.html(html).listview("refresh");
+      this.$el.html(html);
     },
 
     el: '#line-list'

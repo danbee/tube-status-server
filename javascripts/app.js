@@ -1,36 +1,18 @@
-define(['jquerymobile',
-        'backbone',
+define(['backbone',
         'mustache',
         'collections/lines',
+        'views/main',
         'views/line_list'],
-function(a, Backbone, Mustache, LinesCollection, LineList) {
+function(Backbone, Mustache, LinesCollection, Main, LineList) {
   return {
     initialize: function() {
-      $('body').removeClass('loading');
-      var refetch = function() {
-        $.mobile.loading('show');
-        lines.fetch({
-          success: function() {
-            $.mobile.loading('hide');
-          }
-        });
-      }
 
       lines = new LinesCollection;
+      main = new Main({ collection: lines });
       lineList = new LineList({ collection: lines });
       lines.url = lines.urls.now;
 
       lines.fetch();
-
-      $('#refresh').on("click", function() {
-        refetch();
-        return false;
-      });
-
-      $('footer a').on("click", function() {
-        lines.url = lines.urls[this.id];
-        refetch();
-      });
     }
   };
 });

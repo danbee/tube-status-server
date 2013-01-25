@@ -1,5 +1,104 @@
-body.loading {
-  display: none; }
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Arial", sans-serif; }
+
+header {
+  position: fixed;
+  width: 100%;
+  background: #0019a8;
+  background-color: #8f9fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8f9fff), color-stop(100%, #001175));
+  background-image: -webkit-linear-gradient(top, #8f9fff, #001175);
+  background-image: -moz-linear-gradient(top, #8f9fff, #001175);
+  background-image: -ms-linear-gradient(top, #8f9fff, #001175);
+  background-image: -o-linear-gradient(top, #8f9fff, #001175);
+  background-image: linear-gradient(top, #8f9fff, #001175);
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 2.5em;
+  padding-top: 0.45em;
+  border-bottom: 1px solid #0f0f64; }
+  header h1 {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: normal;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.8); }
+  header #refresh {
+    position: absolute;
+    right: 1em;
+    top: 0.25em;
+    border-radius: 0.3em;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 0 3px rgba(255, 255, 255, 0.6);
+    padding: 0.1em 0.5em;
+    font-weight: bold;
+    color: white; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #111;
+  text-align: center;
+  height: 4em;
+  padding-top: 0.3em; }
+  footer li {
+    display: inline-block;
+    width: 32%; }
+    footer li a {
+      font-size: 0.8em;
+      height: 4.2em;
+      padding: 0.4em;
+      color: white;
+      display: block;
+      border-radius: 0.3em; }
+      footer li a.selected {
+        background-color: #333333;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #333333), color-stop(100%, #111111));
+        background-image: -webkit-linear-gradient(top, #333333, #111111);
+        background-image: -moz-linear-gradient(top, #333333, #111111);
+        background-image: -ms-linear-gradient(top, #333333, #111111);
+        background-image: -o-linear-gradient(top, #333333, #111111);
+        background-image: linear-gradient(top, #333333, #111111);
+        border: 1px solid black;
+        -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.3);
+        box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.3); }
+
+section[role="main"] {
+  padding: 2.5em 0 4em; }
+
+ul#line-list {
+  list-style: none;
+  padding: 0; }
+  ul#line-list li a {
+    background: #ffffff;
+    /* Old browsers */
+    background-color: white;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #f1f1f1));
+    background-image: -webkit-linear-gradient(top, white, #f1f1f1);
+    background-image: -moz-linear-gradient(top, white, #f1f1f1);
+    background-image: -ms-linear-gradient(top, white, #f1f1f1);
+    background-image: -o-linear-gradient(top, white, #f1f1f1);
+    background-image: linear-gradient(top, white, #f1f1f1);
+    text-shadow: 0 2px 2px white;
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: white white #cccccc;
+    display: block;
+    padding: 0.7em 1em;
+    text-decoration: none; }
 
 li .name {
   text-shadow: none;
@@ -8,14 +107,14 @@ li .name {
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2), inset 0 0 3px rgba(255, 255, 255, 0.6);
   border: 1px solid rgba(0, 0, 0, 0.1); }
-
 li .status {
   float: right;
   text-transform: capitalize;
   font-size: 0.8em;
+  font-weight: bold;
   padding-top: 0.1em; }
-
 li .message-count {
+  text-shadow: none;
   width: 1.2em;
   height: 1.2em;
   border: 2px solid white;
@@ -28,16 +127,12 @@ li .message-count {
   color: white;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: 1em; }
-
 li .good-service {
   color: green; }
-
 li .special-service {
   color: #000099; }
-
 li .part-suspended, li .part-closure, li .minor-delays {
   color: #CC9900; }
-
 li .major-delays {
   color: #CC0000; }
 
