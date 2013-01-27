@@ -15,6 +15,20 @@ body {
   margin: 0;
   font-family: "Helvetica Neue", "Arial", sans-serif;
 }
+
+#loader {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  margin: -26px 0 0 -26px;
+  background: black url(/images/loader.gif) center center no-repeat;
+  border-radius: 26px;
+  opacity: 0.5;
+  display: none;
+}
+
 header {
   position: fixed;
   width: 100%;

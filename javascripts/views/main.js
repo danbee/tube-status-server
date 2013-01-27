@@ -12,9 +12,9 @@ function(Backbone) {
 
     initialize: function() {
       this.collection.on("request", function() {
-        // $.mobile.loading('show');
+        $('#loader').show();
       }).on("reset", function() {
-        // $.mobile.loading('hide');
+        $('#loader').hide();
       });
     },
 
@@ -29,7 +29,7 @@ function(Backbone) {
       $('footer a').removeClass("selected");
       $(e.currentTarget).addClass("selected");
       this.collection.fetch();
-    }
+    },
 
   });
 
