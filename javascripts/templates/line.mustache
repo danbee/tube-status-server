@@ -4,8 +4,9 @@
     {{ #message_count }}<span class="message-count">{{ message_count }}</span>{{ /message_count }}
     <span class="status {{ status_class }}">{{ status }}</span>
   </a>
-  {{ #messages }}
-  <div id="#{{ id }}_messages">
-  </div>
-  {{ /messages }}
+  {{ #message_count }}
+    <div class="messages">
+      {{& messages_html }}
+    </div>
+  {{ /message_count }}
 </li>

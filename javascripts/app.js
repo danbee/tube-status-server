@@ -1,16 +1,16 @@
 define(['backbone',
         'mustache',
-        'collections/lines',
+        'collections/lines_now',
         'views/main',
         'views/line_list'],
-function(Backbone, Mustache, LinesCollection, Main, LineList) {
+function(Backbone, Mustache, LinesNowCollection, Main, LineList) {
   return {
     initialize: function() {
 
-      lines = new LinesCollection;
+      lines = new LinesNowCollection;
       main = new Main({ collection: lines });
       lineList = new LineList({ collection: lines });
-      lines.url = lines.urls.now;
+      //lines.url = lines.urls.now;
 
       lines.fetch();
     }

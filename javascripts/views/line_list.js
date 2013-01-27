@@ -2,13 +2,13 @@ define(['backbone',
         'text',
         'mustache',
         'models/line',
-        'collections/lines',
+        'text!templates/message.mustache',
         'text!templates/line.mustache'],
 function(Backbone,
          Text,
          Mustache,
          Line,
-         LineCollection,
+         messageTemplate,
          lineTemplate) {
 
   var LineList = Backbone.View.extend({
@@ -22,7 +22,12 @@ function(Backbone,
     render: function() {
       var html = "";
       this.collection.models.forEach(function(model) {
-        html += Mustache.render(lineTemplate, model.toJSON());
+        var messages_html = "";
+        model.attributes.messages.forEach(function(message) {
+          messages_html += Mustache.render(messageTemplate, { message: message });
+        });
+        model.set("messages_html", messages_html);
+        html += Mustache.render(lineTemplate, model.attributes);
       });
       // render the HTML and refresh jQuery Mobile.
       this.$el.html(html);

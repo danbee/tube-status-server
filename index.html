@@ -2,10 +2,36 @@
 <html lang="en" charset="utf-8">
   <head>
     <title>London Underground Status</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1">
+    <meta content="yes" name="apple-mobile-web-app-capable">
     <link rel="stylesheet" href="stylesheets/main.css" />
     <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
     <script src="javascripts/libs/require.js" data-main="javascripts/main"></script>
+
+    <!-- iPhone -->
+    <link href="/images/apple-touch-icon-57x57.png"
+    sizes="57x57"
+    rel="apple-touch-icon">
+    <link href="/images/apple-touch-startup-image-320x460.png"
+    media="(device-width: 320px) and (device-height: 480px)
+    and (-webkit-device-pixel-ratio: 1)"
+    rel="apple-touch-startup-image">
+
+    <!-- iPhone (Retina) -->
+    <link href="/images/apple-touch-icon-114x114.png"
+    sizes="114x114"
+    rel="apple-touch-icon">
+    <link href="/images/apple-touch-startup-image-640x920.png"
+    media="(device-width: 320px) and (device-height: 480px)
+    and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image">
+
+    <!-- iPhone 5 -->
+    <link href="/images/apple-touch-startup-image-640x1096.png"
+    media="(device-width: 320px) and (device-height: 568px)
+    and (-webkit-device-pixel-ratio: 2)"
+    rel="apple-touch-startup-image">
+
   </head>
 
   <body class="loading">
@@ -14,7 +40,7 @@
 
       <header role="banner">
         <h1>Tube Status</h1>
-        <a href="/" id="refresh" title="Refresh">&#x27F3;</a>
+        <a href="/" id="refresh" title="Refresh">&#xe000;</a>
       </header>
 
       <section role="main">
@@ -24,9 +50,8 @@
 
       <footer>
         <ul>
-          <li><a href="#" id="now" class="selected">Now</a></li>
-          <li><a href="#" id="tomorrow">Tomorrow</a></li>
-          <li><a href="#" id="weekend">Weekend</a></li>
+          <li><a href="#" id="now" class="selected icon-time">Now</a></li>
+          <li><a href="#" id="weekend" class="icon-glass">Weekend</a></li>
         </ul>
       </footer>
 
