@@ -5,7 +5,9 @@
     <meta name="viewport" content="initial-scale=1">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <link rel="stylesheet" href="stylesheets/main.css" />
-    <script type="text/javascript" charset="utf-8" src="cordova-2.3.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="javascripts/libs/cordova-2.2.0.js"></script>
+    <script src="javascripts/libs/TabBar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="javascripts/libs/NavigationBar.js" type="text/javascript" charset="utf-8"></script>
     <script src="javascripts/libs/require.js" data-main="javascripts/main"></script>
 
     <!-- iPhone -->
@@ -36,24 +38,12 @@
 
   <body class="loading">
 
-    <div role="page">
-
-      <header role="banner">
-        <h1>Tube Status</h1>
-        <a href="/" id="refresh" title="Refresh">&#xe000;</a>
-      </header>
+    <div id="page" role="page">
 
       <section role="main">
-        <ul id="line-list" class="main-list">
+        <ul id="line-list" class="main-list" role="list">
         </ul>
       </section>
-
-      <footer>
-        <ul>
-          <li><a href="#" id="now" class="selected icon-time">Now</a></li>
-          <li><a href="#" id="weekend" class="icon-glass">Weekend</a></li>
-        </ul>
-      </footer>
 
     </div>
 

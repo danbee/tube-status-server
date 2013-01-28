@@ -23,7 +23,7 @@ body {
   width: 52px;
   height: 52px;
   margin: -26px 0 0 -26px;
-  background: black url(/images/loader.gif) center center no-repeat;
+  background: black url(../images/loader.gif) center center no-repeat;
   border-radius: 26px;
   opacity: 0.7;
   display: none;
@@ -112,9 +112,10 @@ footer {
   }
 }
 
-section[role="main"] {
+.html5 section[role="main"] {
   padding: 2.5em 0 4em;
 }
+
 ul#line-list {
   list-style: none;
   padding: 0;

@@ -157,7 +157,7 @@ footer {
         font-size: 1.5em;
         margin: 0.1em 0 0.2em; }
 
-section[role="main"] {
+.html5 section[role="main"] {
   padding: 2.5em 0 4em; }
 
 ul#line-list {
