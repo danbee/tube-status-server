@@ -57,6 +57,12 @@ header {
     color: white;
     font-family: "fontawesome";
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    &:focus {
+      background: rgba(255, 255, 255, 0.2);
+    }
+    &:active {
+      background: rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
