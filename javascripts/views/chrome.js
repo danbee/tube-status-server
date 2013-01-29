@@ -5,7 +5,7 @@ function(iOS, header, footer) {
 
   var Chrome = Backbone.View.extend({
     initialize: function() {
-      if (phonegap && (device.platform == "iOS" || device.platform == "iPhone Simulator")) {
+      if (phonegap && device.platform.match(/(iPhone|iPad)( Simulator)?/)) {
         new iOS({ collection: lines });
       }
       else if (phonegap && device.platform == "Android") {
