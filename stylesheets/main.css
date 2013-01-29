@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'fontawesome';
-  src: url("/fonts/fontawesome.eot");
-  src: url("/fonts/fontawesome.eot?#iefix") format("embedded-opentype"), url("/fonts/fontawesome.svg#fontawesome") format("svg"), url("/fonts/fontawesome.woff") format("woff"), url("/fonts/fontawesome.ttf") format("truetype");
+  src: url("../fonts/fontawesome.eot");
+  src: url("../fonts/fontawesome.eot?#iefix") format("embedded-opentype"), url("../fonts/fontawesome.svg#fontawesome") format("svg"), url("../fonts/fontawesome.woff") format("woff"), url("../fonts/fontawesome.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -58,7 +58,7 @@ body {
   width: 52px;
   height: 52px;
   margin: -26px 0 0 -26px;
-  background: black url(/images/loader.gif) center center no-repeat;
+  background: black url(../images/loader.gif) center center no-repeat;
   border-radius: 26px;
   opacity: 0.7;
   display: none; }
@@ -98,10 +98,19 @@ header {
     color: white;
     font-family: "fontawesome";
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5); }
-    header #refresh:focus {
+    header #refresh:hover, header #refresh:focus {
       background: rgba(255, 255, 255, 0.2); }
     header #refresh:active {
-      background: rgba(255, 255, 255, 0.3); }
+      padding: 0.4em 0.7em 0.3em;
+      background-color: rgba(255, 255, 255, 0);
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.15)));
+      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+      background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+      background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+      background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+      background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4); }
 
 footer {
   position: fixed;
@@ -149,7 +158,6 @@ footer {
         background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
         background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
         background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-        border: 1px solid black;
         -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4);
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4); }
       footer li a:before {
