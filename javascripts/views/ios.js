@@ -43,7 +43,7 @@ function(Backbone) {
 
       navBar.show();
       tabBar.show();
-      tabBar.showItems("now", "tomorrow", "weekend");
+      tabBar.showItems("now", "weekend");
     }
   });
 
