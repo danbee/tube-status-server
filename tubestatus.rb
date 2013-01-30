@@ -3,7 +3,7 @@ require 'json'
 require 'xmlsimple'
 require 'faraday'
 
-class Tubefeed < Sinatra::Base
+class Tubestatus < Sinatra::Base
   def parse_xml_feed(feed_url)
     uri = URI(feed_url)
     conn = Faraday.new(:url => "#{uri.scheme}://#{uri.host}")

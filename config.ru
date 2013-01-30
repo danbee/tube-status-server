@@ -1,6 +1,6 @@
 require 'bundler'
 
 Bundler.setup
-require './tubefeed'
+require './tubestatus'
 
-run Tubefeed
+run Tubestatus

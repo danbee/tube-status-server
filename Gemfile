@@ -1,7 +1,6 @@
 source :rubygems
 
 gem 'sinatra'
-gem 'sinatra-jsonp'
 gem 'faraday'
 gem 'xml-simple'
 gem 'foreman'
