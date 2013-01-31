@@ -27,7 +27,7 @@ class Tubestatus < Sinatra::Base
       { :id => line["Line"].first["Name"].downcase.gsub(/ (and)?/, ""),
         :name => line["Line"].first["Name"],
         :status => line["Status"].first["Description"].downcase,
-        :messages => [] }
+        :messages => line["StatusDetails"].empty? ? [] : [line["StatusDetails"]] }
     end
 
     JSON data
