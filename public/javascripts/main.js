@@ -1,6 +1,6 @@
 require.config({
   paths: {
-    jquery: 'libs/jquery.min',
+    zepto: 'libs/zepto.min',
     underscore: 'libs/underscore',
     backbone: 'libs/backbone',
     mustache: 'libs/mustache',
@@ -11,7 +11,7 @@ require.config({
       exports: '_'
     },
     backbone: {
-      deps: ["underscore", "jquery"],
+      deps: ["underscore", "zepto"],
       exports: "Backbone"
     }
   }

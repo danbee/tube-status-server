@@ -12,9 +12,9 @@ function(Backbone) {
 
     initialize: function() {
       this.collection.on("request", function() {
-        $('#loader').fadeIn(100);
+        $('#loader').show();
       }).on("reset", function() {
-        $('#loader').fadeOut(100);
+        $('#loader').hide();
       });
     },
 

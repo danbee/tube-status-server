@@ -1,5 +1,11 @@
 CACHE MANIFEST
+# rev 3
 
+NETWORK:
+/now.json
+/weekend.json
+
+CACHE:
 index.html
 images/loader.gif
 
@@ -14,7 +20,8 @@ javascripts/app.js
 javascripts/main.js
 
 javascripts/libs/backbone.js
-javascripts/libs/jquery.min.js
+javascripts/libs/mustache.js
+javascripts/libs/zepto.min.js
 javascripts/libs/json.js
 javascripts/libs/require.js
 javascripts/libs/text.js
@@ -26,7 +33,7 @@ javascripts/collections/lines.js
 javascripts/templates/header.html
 javascripts/templates/footer.html
 javascripts/templates/line.mustache
-javascripts/templates/messages.mustache
+javascripts/templates/message.mustache
 
 javascripts/views/main.js
 javascripts/views/chrome.js
