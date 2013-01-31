@@ -5,6 +5,8 @@ gem 'faraday'
 gem 'xml-simple'
 gem 'foreman'
 
+gem 'newrelic_rpm'
+
 group :development do
   gem 'shotgun'
 end

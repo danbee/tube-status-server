@@ -3,6 +3,10 @@ require 'json'
 require 'xmlsimple'
 require 'faraday'
 
+configure :production do
+  require 'newrelic_rpm'
+end
+
 class Tubestatus < Sinatra::Base
   def parse_xml_feed(feed_url)
     uri = URI(feed_url)
