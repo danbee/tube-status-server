@@ -1,7 +1,6 @@
 <li id="{{ id }}" role="listitem">
   <a href="#{{ id }}_messages">
     <span class="name">{{& name }}</span>
-    {{ #message_count }}<span class="message-count">{{ message_count }}</span>{{ /message_count }}
     <span class="status {{ status_class }}">{{ status }}</span>
   </a>
   {{ #message_count }}
