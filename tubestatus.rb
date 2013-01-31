@@ -16,7 +16,7 @@ class Tubestatus < Sinatra::Base
   end
 
   get '/' do
-    send_file File.join(settings.public_folder, 'index.html')
+    erb :index
   end
 
   get '/now.json' do

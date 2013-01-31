@@ -1,12 +1,12 @@
 CACHE MANIFEST
-# rev 3
+# rev 4
 
 NETWORK:
+/
 /now.json
 /weekend.json
 
 CACHE:
-index.html
 images/loader.gif
 
 fonts/fontawesome.eot
@@ -16,25 +16,6 @@ fonts/fontawesome.woff
 
 stylesheets/main.css
 
-javascripts/app.js
-javascripts/main.js
+javascripts/build.js
 
-javascripts/libs/backbone.js
-javascripts/libs/mustache.js
-javascripts/libs/zepto.min.js
-javascripts/libs/json.js
 javascripts/libs/require.js
-javascripts/libs/text.js
-javascripts/libs/underscore.js
-
-javascripts/models/line.js
-javascripts/collections/lines.js
-
-javascripts/templates/header.html
-javascripts/templates/footer.html
-javascripts/templates/line.mustache
-javascripts/templates/message.mustache
-
-javascripts/views/main.js
-javascripts/views/chrome.js
-javascripts/views/line_list.js

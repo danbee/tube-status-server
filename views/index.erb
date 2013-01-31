@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" charset="utf-8" manifest="cache.manifest">
+<html lang="en" charset="utf-8"<%= ENV["RACK_ENV"] == 'production' ? 'manifest="cache.manifest"' : '' %>>
   <head>
     <title>Tube Status</title>
     <meta name="viewport" content="initial-scale=1">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <link rel="stylesheet" href="stylesheets/main.css" />
-    <script src="javascripts/libs/require.js" data-main="javascripts/main"></script>
+    <% if ENV["RACK_ENV"] == 'production' %>
+      <script src="javascripts/libs/require.js"></script>
+      <script src="javascripts/main_compiled.js"></script>
+    <% else %>
+      <script src="javascripts/libs/require.js" data-main="javascripts/main"></script>
+    <% end %>
 
     <!-- iPhone -->
     <link href="/images/apple-touch-icon-57x57.png"
