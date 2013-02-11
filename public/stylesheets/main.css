@@ -19,7 +19,7 @@
 Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
-*/
+ */
 .icon-repeat:before, .icon-time:before, .icon-glass:before {
   font-family: 'fontawesome';
   speak: none;
@@ -44,13 +44,6 @@ you can use the generic selector below, but it's slower:
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-a {
-  text-decoration: none; }
-
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", "Arial", sans-serif; }
-
 #loader {
   position: fixed;
   top: 45%;
@@ -63,54 +56,64 @@ body {
   opacity: 0.7;
   display: none; }
 
-header {
+.header, header {
   position: fixed;
   width: 100%;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 2.5em;
+  padding-top: 0.45em; }
+  .header h1, header h1 {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: normal;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); }
+
+a {
+  text-decoration: none; }
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Arial", sans-serif; }
+
+header {
   background: #0019a8;
+  border-bottom: 1px solid #000e5b;
   background-color: #758aff;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #758aff), color-stop(100%, #00158e));
   background-image: -webkit-linear-gradient(top, #758aff, #00158e);
   background-image: -moz-linear-gradient(top, #758aff, #00158e);
   background-image: -ms-linear-gradient(top, #758aff, #00158e);
   background-image: -o-linear-gradient(top, #758aff, #00158e);
-  background-image: linear-gradient(top, #758aff, #00158e);
-  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(top, #758aff, #00158e); }
+
+#refresh {
+  position: absolute;
+  right: 1em;
+  top: 0.25em;
+  border-radius: 0.3em;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.4);
+  padding: 0.3em 0.7em 0.4em;
   color: white;
-  height: 2.5em;
-  padding-top: 0.45em;
-  border-bottom: 1px solid #0f0f64; }
-  header h1 {
-    text-align: center;
-    font-size: 1.3em;
-    font-weight: normal;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.4); }
-  header #refresh {
-    position: absolute;
-    right: 1em;
-    top: 0.25em;
-    border-radius: 0.3em;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    background: rgba(255, 255, 255, 0.1);
-    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.4);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.4);
-    padding: 0.3em 0.7em 0.4em;
-    color: white;
-    font-family: "fontawesome";
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5); }
-    header #refresh:hover, header #refresh:focus {
-      background: rgba(255, 255, 255, 0.2); }
-    header #refresh:active {
-      padding: 0.4em 0.7em 0.3em;
-      background-color: rgba(255, 255, 255, 0);
-      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.15)));
-      background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-      background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-      background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-      background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-      background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-      -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4);
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4); }
+  font-family: "fontawesome";
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5); }
+  #refresh:hover, #refresh:focus {
+    background: rgba(255, 255, 255, 0.2); }
+  #refresh:active {
+    padding: 0.4em 0.7em 0.3em;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0.15)));
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4); }
 
 footer {
   position: fixed;
