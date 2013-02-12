@@ -21,6 +21,9 @@ body {
   border-radius: 26px;
   opacity: 0.7;
   display: none; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+    #loader {
+      background: black url(/images/loader@2x.gif) center center no-repeat; } }
 
 .header, header {
   position: fixed;
