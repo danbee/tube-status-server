@@ -1,109 +1,37 @@
-@import "iconfont";
-
 $header-color: rgb(0, 25, 168);
 
 @import "bourbon/bourbon";
-@import "bourbon-mobile/bourbon-mobile";
+@import "julep/julep";
+
+@import "iconfont";
+
 a {
   text-decoration: none;
 }
-body {
-  margin: 0;
-  font-family: "Helvetica Neue", "Arial", sans-serif;
-}
 
 header {
-  @include header(rgb(0, 25, 168));
+  @include header($header-color);
 }
 
 #refresh {
   position: absolute;
   right: 1em;
-  top: 0.25em;
-  border-radius: 0.3em;
-  border: 1px solid rgba(0, 0, 0, 0.4);
-  background: rgba(255, 255, 255, 0.1);
-  @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.4));
-  padding: 0.3em 0.7em 0.4em;
-  color: white;
+  top: 0.3em;
   font-family: "fontawesome";
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-  &:hover, &:focus {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  &:active {
-    padding: 0.4em 0.7em 0.3em;
-    @include linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-    @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4));
-  }
+  @include button(desaturate(lighten($header-color, 25%), 20%));
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #111;
-  text-align: center;
-  height: 4em;
-  padding-top: 0.3em;
-  @include linear-gradient(#333, #111);
-  @include box-shadow(0 -2px 3px rgba(0, 0, 0, 0.5));
-  li {
-    display: inline-block;
-    width: 49%;
-    &:first-child a {
-      margin-left: 0;
-      border-radius: 0.3em 0 0 0.3em;
-    }
-    &:last-child a {
-      border-radius: 0 0.3em 0.3em 0;
-    }
-    a {
-      font-size: 0.8em;
-      height: 4.2em;
-      padding: 0.4em;
-      color: rgba(255, 255, 255, 0.6);
-      display: block;
-      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-      border: 1px solid black;
-      margin-left: -1px;
-      @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.4));
-      &.selected {
-        color: white;
-        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5), 0 0 5px rgba(255, 255, 255, 0.3);
-        @include linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15));
-        @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.3), inset 0 2px 2px rgba(0, 0, 0, 0.4));
-      }
-      &:before {
-        display: block;
-        font-size: 1.5em;
-        margin: 0.1em 0 0.2em;
-      }
-    }
-  }
+  @include tabbar(2);
 }
 
 .html5 section[role="main"] {
-  padding: 2.5em 0 4em;
+  @include content(header, tabbar);
 }
 
 ul#line-list {
-  list-style: none;
-  padding: 0;
+  @include list;
   li {
-    a {
-      background: #ffffff; /* Old browsers */
-      @include linear-gradient(white, #f1f1f1);
-      text-shadow: 0 2px 2px white;
-      border: {
-        style: solid;
-        width: 1px 0;
-        color: #ffffff white #cccccc;
-      }
-      display: block;
-      padding: 0.7em 1em;
-      text-decoration: none;
-    }
     .messages {
       padding: 1em 1.5em 0.5em;
       font-size: 0.8em;
