@@ -29,6 +29,7 @@ class Tubestatus < Sinatra::Base
         :messages => line["StatusDetails"].empty? ? [] : [line["StatusDetails"]] }
     end
 
+    content_type :json
     JSON data
   end
 
@@ -49,6 +50,7 @@ class Tubestatus < Sinatra::Base
         :messages => messages }
     end
 
+    content_type :json
     JSON data
   end
 end

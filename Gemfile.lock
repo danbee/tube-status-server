@@ -12,6 +12,7 @@ GEM
     multipart-post (2.0.0)
     newrelic_rpm (3.10.0.279)
     rack (1.6.0)
+    rack-cors (0.3.1)
     rack-protection (1.5.3)
       rack
     shotgun (0.9.1)
@@ -35,6 +36,7 @@ DEPENDENCIES
   faraday
   foreman
   newrelic_rpm
+  rack-cors
   shotgun
   sinatra
   thin
