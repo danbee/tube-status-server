@@ -23,7 +23,7 @@ class Tubestatus < Sinatra::Base
 
     # Parse the XML into the appropriate structure for our app.
     data = feed_data["LineStatus"].map do |line|
-      { :id => line["Line"].first["Name"].downcase.gsub(/ (and)?/, ""),
+      { :id => line["Line"].first["Name"].downcase.gsub(/[^a-z]+/, "-"),
         :name => line["Line"].first["Name"],
         :status => line["Status"].first["Description"].downcase,
         :messages => line["StatusDetails"].empty? ? [] : [line["StatusDetails"]] }
