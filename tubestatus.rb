@@ -15,10 +15,6 @@ class Tubestatus < Sinatra::Base
     XmlSimple.xml_in response.body
   end
 
-  get '/' do
-    erb :index
-  end
-
   get '/now.json' do
     feed_data = parse_xml_feed("http://cloud.tfl.gov.uk/TrackerNet/LineStatus")
 
