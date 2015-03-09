@@ -7,7 +7,7 @@ require 'rack/cors'
 
 use Rack::Cors do
   allow do
-    origins ENV['CORS_ALLOW_ORIGINS']
+    origins ENV['CORS_ALLOW_ORIGINS'].split(',').map(&:strip)
     resource '*', headers: :any
   end
 end
