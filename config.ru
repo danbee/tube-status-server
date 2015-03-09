@@ -1,4 +1,8 @@
 require 'bundler'
+
+require 'dotenv'
+Dotenv.load
+
 require 'rack/cors'
 
 use Rack::Cors do
