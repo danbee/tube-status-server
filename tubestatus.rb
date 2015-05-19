@@ -41,13 +41,21 @@ class Tubestatus < Sinatra::Base
         messages = []
       end
 
-      { :id => line["Name"].first.downcase.gsub(/ (&)?/, ""),
-        :name => line["Name"].first,
+      name = weekend_line_mapping(line["Name"].first)
+
+      { :id => name.downcase.gsub(/[^a-z]+/, "-"),
+        :name => name,
         :status => line["Status"].first["Text"].first.downcase,
         :messages => messages }
     end
 
     content_type :json
     JSON data
+  end
+
+  def weekend_line_mapping(name)
+    mapping = { 'H\'smith & City' => 'Hammersmith and City',
+                'Waterloo & City' => 'Waterloo and City' }
+    mapping[name] || name
   end
 end
