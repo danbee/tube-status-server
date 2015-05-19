@@ -27,7 +27,7 @@ class Tubestatus < Sinatra::Base
     end
 
     content_type :json
-    JSON data
+    JSON sort_lines(data)
   end
 
   get '/weekend.json' do
@@ -50,12 +50,16 @@ class Tubestatus < Sinatra::Base
     end
 
     content_type :json
-    JSON data
+    JSON sort_lines(data)
   end
 
   def weekend_line_mapping(name)
     mapping = { 'H\'smith & City' => 'Hammersmith and City',
                 'Waterloo & City' => 'Waterloo and City' }
     mapping[name] || name
+  end
+
+  def sort_lines(lines)
+    lines.sort { |x, y| x[:name] <=> y[:name] }
   end
 end
