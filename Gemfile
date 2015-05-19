@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.1'
+ruby '2.2.2'
 
 gem 'sinatra'
 gem 'faraday'
@@ -10,10 +10,4 @@ gem 'rack-cors'
 
 gem 'newrelic_rpm'
 
-group :development do
-  gem 'shotgun'
-end
-
-group :production do
-  gem 'thin'
-end
+gem 'puma'
